@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Tshirtstore.Models.OrderViewModel>
+
+@{
+    ViewBag.Title = "ViewOrder";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="pagecontent">
+    <h2 class="h2">All Orders</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Product Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>User Name</th>
+            <th>Shipping Address</th>
+            <th>Order Date</th>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.ProductId</td>
+                <td>@i.ProductName</td>
+                <td>@i.Price</td>
+                <td>@i.UserName</td>
+                <td>@i.ShippingAddress</td>
+                <td>@i.OrderDate.ToString("d")</td>
+        </tr>
+        }
+    </table>
+</div>

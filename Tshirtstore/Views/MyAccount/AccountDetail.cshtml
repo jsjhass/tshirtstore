@@ -1,0 +1,13 @@
+﻿@model Tshirtstore.Models.Client
+
+@{
+    ViewBag.Title = "AccountDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="pagecontent">
+    <h2>Account Detail</h2>
+    <div id="logout">
+        @Html.ActionLink("Logout", "Logout", "MyAccount")
+    </div>
+    <p>Welcome @Session["user"].ToString() </p>
+</div>

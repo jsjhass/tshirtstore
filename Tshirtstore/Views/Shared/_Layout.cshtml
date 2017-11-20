@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Tshirtstore</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="header">
+        <div id="logo">Tshirtstore</div>
+        <div id="home">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "menulink" }) </div>
+        <div id="wishlist">Wish List</div>
+        <div id="account">@Html.ActionLink("My Account", "Index", "MyAccount", null, new { @class = "menulink" }) </div>
+        <div id="checkout">@Html.ActionLink("Checkout", "Checkout", "Shop", null, new { @class = "menulink" }) </div>
+        <div id="cart">@Html.ActionLink("Cart", "ViewCart", "Shop", null, new { @class = "menulink" }) </div>
+        <div id="searchbar">
+        <div>
+            @using (Html.BeginForm("Search","Home",FormMethod.Post))
+            {
+                <input type="text" name="txtSearch" placeholder="Search Tshirts" /><input type="submit" value="" class="butnsrch" />
+            }
+        </div>
+        </div>
+    </div>
+    <div class="content">
+    <div class="leftcontent">
+        <div class="category">
+            <ul>
+                <li>@Html.ActionLink("Kids","Index","Product",new {cat=1},null) </li>
+                <li>@Html.ActionLink("Women", "Index", "Product", new { cat = 2 }, null)</li>
+                <li>@Html.ActionLink("Men", "Index", "Product", new { cat = 3 }, null)</li>
+                <li>@Html.ActionLink("Babies", "Index", "Product", new { cat = 4 }, null)</li>
+                <li>Latest Trending</li>
+                <li>Discount Tees</li>
+            </ul>
+        </div>
+        <div class="cod"><img src="~/Content/images/C.O.D.jpg" alt="cod" class="sideimg" /> </div>
+        <div class="cod"><img src="~/Content/images/FreeHomeDeliver.jpg" alt="free" class="sideimg" /> </div>
+    </div>
+    <div class="rightcontent">@RenderBody()</div>
+    </div>
+    <div class="footer">Tshirtstore</div>
+    
+</body>
+</html>

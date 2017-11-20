@@ -1,0 +1,63 @@
+﻿@model Tshirtstore.Models.Product
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string cat = ViewBag.cat;
+}
+
+<div class="pagecontent">
+    <h2 class="h2">Tshirt Detail</h2>
+    <div class="row">
+        <div class="col-md-6 productimage">
+                <img src="~/Content/images/Tshirt/@cat/@Model.Image" alt="zz" class="sideimg img" />
+        </div>
+        <div class="col-md-6 productdesc">
+            <table class="table">
+                <tr>
+                    <td>
+                        @Model.ProductName
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Price: Rs. @Model.Price 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @if(Session["user"]==null)
+                        {
+                            <p>Please Login to Add Cart.</p>
+                        }
+                        else
+                        {
+                            <button id="addcart" class="butn">Add to Cart</button>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="msg"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+@Styles.Render("~/Content/zoomify.min.css")
+@Scripts.Render("~/Scripts/zoomify.min.js")
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.img').zoomify();
+        $('#addcart').click(function () {
+            $.ajax({
+                url: '@Url.Action("AddCart","Shop")',
+                type:"POST",
+                data:{'id':@Model.ProductId },
+                success:function(data){
+                    $('#msg').slideDown("slow").text(data);
+                }
+            });
+        });
+    });
+</script>

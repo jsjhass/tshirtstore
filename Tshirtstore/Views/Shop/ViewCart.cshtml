@@ -1,0 +1,29 @@
+﻿@model List<Tshirtstore.Models.Product>
+
+@{
+    ViewBag.Title = "ViewCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="pagecontent">
+    <h2 class="h2">Your Cart</h2>
+    @if(Session["cart"]==null)
+    {
+        <p>Your cart is empty.</p>
+    }
+    else
+    {
+     <p>Total items: @Session["count"].ToString()  </p>   
+     <table class="table table-bordered">
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.ProductName</td>
+                <td>Rs. @i.Price</td>
+                <td>@Html.ActionLink("Remove","RemoveCart",new{id=@i.ProductId}) <span class="glyphicon glyphicon-remove"></span> </td>
+            </tr>
+        }
+    </table>
+    <p>Total Price: @ViewBag.total </p>
+    }
+    
+</div>

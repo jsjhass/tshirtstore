@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Home ";
+}
+
+<div class="pagecontent">
+    <div class="banner"><img src="~/Content/images/banner1.jpg" alt="banner" style="min-width:100%;" /> </div>
+        <h2 class="h2">Kids Latest</h2>
+        <div class="productgrid row">
+        @foreach(Tshirtstore.Models.Product p in ViewBag.kid)
+        {
+            <div class="productcontent col-md-3">
+                <img src="~/Content/images/Tshirt/Kids/@p.ImageThumb" alt="p" />
+                <div class="productlink">
+                    @Html.ActionLink(@p.ProductName, "ProductDetail", "Product", new { id = @p.ProductId },null)
+                   <span class="price">Rs. @p.Price</span> 
+                </div>
+            </div>
+         }
+        </div>
+    <h2 class="h2">Women Latest</h2>
+    <div class="productgrid row">
+        @foreach (Tshirtstore.Models.Product p in ViewBag.women)
+        {
+            <div class="productcontent col-md-3">
+                <img src="~/Content/images/Tshirt/Women/@p.ImageThumb" alt="p" />
+                <div class="productlink">
+                    @Html.ActionLink(@p.ProductName, "ProductDetail", "Product", new { id = @p.ProductId }, null)
+                    <span class="price">Rs. @p.Price</span>
+                </div>
+            </div>
+        }
+    </div>
+    <h2 class="h2">Men Latest</h2>
+    <div class="productgrid row">
+        @foreach (Tshirtstore.Models.Product p in ViewBag.men)
+        {
+            <div class="productcontent col-md-3">
+                <img src="~/Content/images/Tshirt/Men/@p.ImageThumb" alt="p" />
+                <div class="productlink">
+                    @Html.ActionLink(@p.ProductName, "ProductDetail", "Product", new { id = @p.ProductId }, null)
+                    <span class="price">Rs. @p.Price</span>
+                </div>
+            </div>
+        }
+    </div>
+    <h2 class="h2">Babies Latest</h2>
+    <div class="productgrid row">
+        @foreach (Tshirtstore.Models.Product p in ViewBag.baby)
+        {
+            <div class="productcontent col-md-3">
+                <img src="~/Content/images/Tshirt/Babies/@p.ImageThumb" alt="p" />
+                <div class="productlink">
+                    @Html.ActionLink(@p.ProductName, "ProductDetail", "Product", new { id = @p.ProductId }, null)
+                    <span class="price">Rs. @p.Price</span>
+                </div>
+            </div>
+        }
+    </div>
+    <div id="admin">@Html.ActionLink("Admin","Index","Admin") </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@model List<Tshirtstore.Models.SearchViewModel>
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pagecontent">
+    <h2>Search</h2>
+    Search results for @ViewBag.search <br />
+    <div class="productgrid row">
+            @foreach (var p in Model)
+            {
+                <div class="productcontent col-md-3">
+                    <img src="~/Content/images/Tshirt/@p.CategoryName/@p.ImageThumb" alt="p" />
+                    <div class="productlink">
+                        @Html.ActionLink(@p.ProductName, "ProductDetail", "Product", new { id = @p.ProductId }, null)
+                        <span class="price">Rs. @p.Price</span>
+                    </div>
+                </div>
+            }
+    </div>
+</div>

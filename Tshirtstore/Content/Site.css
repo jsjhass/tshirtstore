@@ -1,0 +1,458 @@
+﻿body {
+   margin:0px;
+   padding:0px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.header
+{
+    width:80%;
+    height:210px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#logo
+{
+    float:left;
+    display:inline-block;
+    width:25%;
+    height:150px;
+    padding-top:60px;
+    padding-left:20px;
+    background-color:#000000;
+    color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:30px;
+    font-weight:bold;
+}
+#home
+{
+    float:left;
+    display:inline-block;
+    width:15%;
+    height:150px;
+    background-color:#ff0000;
+    color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image:url(images/home.png);
+    background-repeat:no-repeat;
+    background-position:center 20px;
+}
+#wishlist
+{
+    float:left;
+    display:inline-block;
+    width:15%;
+    height:150px;
+    padding-top:120px;
+    padding-left:20px;
+    background-color:#008d8d;
+    color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image:url(images/wishlist.png);
+    background-repeat:no-repeat;
+    background-position:center 20px;
+}
+#account
+{
+    float:left;
+    display:inline-block;
+    width:15%;
+    height:150px;
+    background-color:#ff0000;
+    color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image:url(images/account.png);
+    background-repeat:no-repeat;
+    background-position:center 20px;
+}
+#checkout
+{
+    float:left;
+    display:inline-block;
+    width:15%;
+    height:150px;
+    background-color:#008d8d;
+    color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image:url(images/checkout.png);
+    background-repeat:no-repeat;
+    background-position:center 20px;
+}
+#cart
+{
+    display:inline-block;
+    width:15%;
+    height:150px;
+    background-color:#ff0000;
+    color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image:url(images/cart.png);
+    background-repeat:no-repeat;
+    background-position:center 20px;
+}
+.content
+{
+    width:80%;
+    min-height:800px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+}
+.footer
+{
+    width:80%;
+    height:100px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:20px;
+    text-align:center;
+    background-color:#524b4b;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:#ffffff;
+}
+#searchbar
+{
+    float:left;
+    width:100%;
+    height:50px;
+    margin-top:10px;
+    background-color:#008d8d;
+}
+#searchbar div
+{
+    float:right;
+    padding-right:20px;
+    padding-top:10px;
+}
+#searchbar div input[type=text]
+{
+    width:250px;
+    height:30px;
+    border:0;
+}
+#home:hover
+{
+    transform:scale(0.95,0.95);
+}
+#wishlist:hover
+{
+    transform:scale(0.95,0.95);
+}
+#account:hover
+{
+    transform:scale(0.95,0.95);
+}
+#checkout:hover
+{
+    transform:scale(0.95,0.95);
+}
+.butn
+{
+    width:120px;
+    height:30px;
+    border:0;
+    font-family:Verdana;
+    font-size:12px;
+    background-color:#ff0000;
+    color:#ffffff;
+}
+.butn:hover
+{
+    background-color:#ff6a00;
+    transition-duration:500ms;
+}
+.butnsrch
+{
+    width:30px;
+    height:30px;
+    border:0;
+    font-family:Verdana;
+    font-size:12px;
+    background-color:#ff0000;
+    background-image:url(images/button-search.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.butnsrch:hover
+{
+    background-color:#ff6a00;
+    transition-duration:500ms;
+}
+.leftcontent
+{
+    float:left;
+    display:inline-block;
+    width:20%;
+    margin-top:10px;
+}
+.rightcontent
+{
+    display:inline-block;
+    width:80%;
+}
+.pagecontent
+{
+    margin-top:10px;
+    padding-left:10px;
+}
+.banner
+{
+    width:100%;
+}
+.category
+{
+    float:left;
+    width:100%;
+    height:300px;
+    background-color:#008d8d;
+}
+.cod
+{
+    float:left;
+    width:100%;
+    height:200px;
+    margin-top:10px;
+}
+.sideimg
+{
+    max-width:100%;
+    max-height:100%;
+    min-width:100%;
+    min-height:100%;
+}
+.menulink
+{
+    display:block;
+    width:100%;
+    height:100%;
+    text-decoration:none;
+    color:#ffffff;
+    padding-top:120px;
+    padding-left:20px;
+}
+.menulink:hover, .menulink:active, .menulink:visited, .menulink:focus
+{
+    text-decoration:none;
+    color:#ffffff;
+}
+.category ul
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+.category ul li
+{
+    color:#ffffff;
+    line-height:40px;
+    width:100%;
+    display:block;
+    padding-left:10px;
+}
+.category ul li:hover
+{
+    background-color:#1be5c0;
+    transition-duration:500ms;
+}
+.category ul li a
+{
+    display:block;
+    width:100%;
+    height:100%;
+    color:#ffffff;
+    text-decoration:none;
+}
+.productcontent
+{
+    padding:10px;
+}
+.productlink
+{
+    width:100%;
+    height:100px;
+    background-color:#524b4b;
+    color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:15px;
+}
+.productlink a
+{
+    display:block;
+    width:100%;
+    height:70%;
+    padding-top:20px;
+    padding-left:20px;
+    text-decoration:none;
+    color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:16px;
+}
+.productlink a:hover
+{
+    background-color:#008d8d;
+    transition:500ms;
+    text-decoration:none;
+    color:#ffffff;
+}
+.productimage
+{
+    height:300px;
+}
+.productdesc
+{
+    height:300px;
+    padding:20px;
+    background-color:#414E5B;
+    color:#ffffff;
+}
+.productdesc tr td
+{
+    height:50px;
+    border-bottom:1px thin #f3e3e3;
+}
+.price
+{
+    padding-left:20px;
+    color:#f3ce1b;
+}
+.addcart
+{
+    display:block;
+    width:120px;
+    height:30px;
+    border:0;
+    font-family:Verdana;
+    font-size:12px;
+    background-color:#ff0000;
+    color:#ffffff;
+    text-align:center;
+    padding-top:5px;
+    text-decoration:none;
+}
+.addcart:hover
+{
+    background-color:#ff6a00;
+    transition-duration:500ms;
+    text-decoration:none;
+}
+.cartimage
+{
+    width:80px;
+    height:80px;
+}
+.h2
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    color:#000000;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#admin
+{
+    position:fixed;
+    top:200px;
+    right:0px;
+    width:80px;
+    height:60px;
+    text-align:center;
+    background-color:#008d8d;
+    z-index:100;
+    border-radius:8px;
+}
+#admin:hover
+{
+    background-color:#ff0000;
+    transition:500ms;
+}
+#admin a
+{
+    display:block;
+    width:100%;
+    height:100%;
+    padding-top:20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#ffffff;
+}
+.filter
+{
+    width:100%;
+    height:60px;
+    background-color:#e0d9d9;
+    padding-top:10px;
+    padding-right:20px;
+}
+.filter #ddlprice
+{
+    float:right;
+} 
+#logout
+{
+    float:right;
+}
+.paymentmethod
+{
+    background-color:#524b4b;
+    line-height:50px;
+    width:50%;
+    padding:20px;
+    color:#ffffff;
+    margin-bottom:20px;
+}
+.adminheader
+{
+    width:80%;
+    height:150px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#ff6a00;
+}
+.adminlink
+{
+    display:block;
+    width:160px;
+    height:160px;
+    padding-top:50px;
+    font-size:20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration:none;
+    text-align:center;
+    background-color:#ff6a00;
+    color:#ffffff;
+}
+.adminlink:hover
+{
+    text-decoration:none;
+    color:#ffffff;
+    transform:scale(1.10,1.10);
+    transition-duration:1s;
+}
+.adminlink:visited, .adminlink:focus, .adminlink:active
+{
+    text-decoration:none;
+    color:#ffffff;
+}

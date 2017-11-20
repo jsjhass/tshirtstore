@@ -1,0 +1,34 @@
+﻿@model Tshirtstore.Models.Order
+
+@{
+    ViewBag.Title = "Cod";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pagecontent">
+    <h2 class="h2">Confirm Order</h2>
+    @using (Html.BeginForm())
+    {
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.ShippingAddress, new { @class = "form-label" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.ShippingAddress, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ShippingAddress, "", new { @class="text-danger"})
+        </div>
+        <div class="col-md-2">
+            @Html.Label("Total Price: ", new { @class = "form-label" })
+        </div>
+        <div class="col-md-10">
+            Rs. @ViewBag.total
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Place Order" class="butn" />
+        </div>
+
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

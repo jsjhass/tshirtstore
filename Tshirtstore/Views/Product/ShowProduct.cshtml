@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Tshirtstore.Models.Product>
+
+@foreach (var p in Model)
+{
+    <div class="productcontent col-md-3">
+        <img src="~/Content/images/Tshirt/@ViewBag.cat/@p.ImageThumb" alt="p" />
+        <div class="productlink">
+            @Html.ActionLink(@p.ProductName, "ProductDetail", "Product", new { id = @p.ProductId }, null)
+            <span class="price">Rs. @p.Price</span>
+        </div>
+    </div>
+}

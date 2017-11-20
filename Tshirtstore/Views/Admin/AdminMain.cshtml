@@ -1,0 +1,21 @@
+﻿@model Tshirtstore.Models.Admin
+
+@{
+    ViewBag.Title = "AdminMain";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pagecontent">
+    <div id="logout">@Html.ActionLink("Logout","Logout","Admin")</div>
+    <p>Welcome @Session["admin"].ToString() </p>
+    <div class="col-md-4">
+        @Html.ActionLink("Add Product", "AddProduct", "Admin", null, new { @class = "adminlink" })
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Remove Product", "RemoveProduct", "Admin", null, new { @class = "adminlink" })
+    </div> 
+    <div class="col-md-4">
+        @Html.ActionLink("View Order", "ViewOrder", "Admin", null, new { @class = "adminlink" })
+    </div>
+</div>
+

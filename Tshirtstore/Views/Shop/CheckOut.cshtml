@@ -1,0 +1,33 @@
+﻿@model Tshirtstore.Models.Order
+
+@{
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="pagecontent">
+    <h2 class="h2">Check Out</h2>
+    @if(Session["cart"]==null)
+    {
+        <p>Your Cart is empty.</p>
+    }
+    else
+    {
+        <p>Please Select Payment method:</p>
+    <div>
+        @using(Html.BeginForm())
+        {
+        <div class="paymentmethod">
+            <input type="radio" name="payment" value="cod" />&nbsp;&nbsp;Cash on Delivery<br />
+            <input type="radio" name="payment" value="dc" />&nbsp;&nbsp;Debit Card<br />
+            <input type="radio" name="payment" value="cc" />&nbsp;&nbsp;Credit Card<br />
+            <input type="radio" name="payment" value="pp" />&nbsp;&nbsp;PayPal<br />
+        </div>
+        <div>
+            <input type="submit" value="Continue" class="butn" />
+        </div>
+        }
+    </div>
+    }
+</div>
+
+
